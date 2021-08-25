@@ -1,4 +1,5 @@
 const prompt = require('Prompt-sync')();
+let addressBookContactArray = Array();
 
 class Contact_info {
     firstName;
@@ -139,6 +140,10 @@ function addContact() {
     let pinCode = prompt("Enter Pin Code : ");
     let phoneNumber = prompt("Enter Phone Number : ");
     let emailID = prompt("Enter Email ID : ");
+
+    //Storing in an Array ie; addressBookList ...
+    let contact = new Contact_info(firstName, lastName, address, city, state, pinCode, phoneNumber, emailID);
+    addressBookContactArray.push(contact);
 }
 
 // Calling addContact Function
